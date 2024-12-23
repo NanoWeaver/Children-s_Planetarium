@@ -1,0 +1,162 @@
+
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/Ubuntu-Light.ttf') format('ttf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Ubuntu-Regular.ttf') format('ttf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/Ubuntu-Medium.ttf') format('ttf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Ubuntu-Bold.ttf') format('ttf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ubuntu';
+    font-style: italic;
+    font-weight: 300;
+    src: url('../fonts/Ubuntu-LightItalic.ttf') format('ttf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ubuntu';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/Ubuntu-Italic.ttf') format('ttf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ubuntu';
+    font-style: italic;
+    font-weight: 500;
+    src: url('../fonts/Ubuntu-MediumItalic.ttf') format('ttf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ubuntu';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/Ubuntu-BoldItalic.ttf') format('ttf'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+:root {
+    --brand: #15b28d;
+    --brand-brighter: #0dd1a2;
+    --base-font-color: #ffffff;
+    --menu: 15px;
+    --btn-small: 14px;
+    --btn-big: 21px;
+    --tel-small: 15px;
+    --h1: 96px;
+    --text-regular: 17px;
+}
+
+html {
+    font-family: 'Ubuntu' , Arial ,sans-serif ;
+}
+
+
+.body--first-page {
+    background-image: url('../image/first-page.png');
+    background-position: 0 0 ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.page-header {
+    padding-left: 64px;
+    padding-top: 43px;
+    padding-right: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header__list {
+    display: flex;
+    column-gap: 39px;
+    list-style: none;
+    padding: 0;
+}
+
+.page-header__item {
+    font-size: var(--menu);
+    color: var(--base-font-color);
+    font-weight: 500;
+}
+
+.page-header__container-right {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.page-header__button {
+    padding: 9px 15px;
+    border: 2px solid var(--brand-brighter);
+    background-color: transparent;
+    font-size: var(--btn-small);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--base-font-color);
+}
+
+.page-header__tel-link {
+    text-decoration: none;
+    color: var(--base-font-color);
+    font-size: var(--tel-small);
+    font-weight: 700;
+}
+
+.hero {
+    padding-left: 120px;
+    padding-top: 153px;
+    padding-bottom: 154px;
+}
+
+.hero__heading {
+    font-size: var(--h1);
+    color: var(--base-font-color);
+    margin-bottom: 24px;
+}
+
+.hero__subtitle {
+    font-size: var(--text-regular);
+    color: var(--base-font-color);
+    width: 494px;
+    margin-bottom: 71px;
+}
+
+.hero__button {
+    background-color: transparent;
+    border: 3px solid var(--brand);
+    border-radius: 4px;
+    padding: 19px 40px 18px;
+    font-size: var(--btn-big);
+    font-weight: 700;
+    color: var(--base-font-color);
+}
+
+.hero__button--ticket {
+    background-color: var(--brand);
+    margin-right: 24px;
+}
