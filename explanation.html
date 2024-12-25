@@ -7,15 +7,91 @@
         <meta name="description" content="Сайт образовательного виртуального планетария Digital Planet VR">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
-    <body>
+    <body class="body">
         <header class="page-header">
+            <a href="/index.html">
+                <img class="page-header__logo" src="./image/Logo-Group.svg" alt="Логотип компании">
+            </a>
+            <nav class="page-header__nav">
+                <ul class="page-header__list">
+                    <li><a class="page-header__item" href="/explanation.html">О продукте</a></li>
+                    <li><a class="page-header__item" href="/product.html">Как работает</a></li>
+                    <li><a class="page-header__item" href="/technology.html">Технология</a></li>
+                    <li><a class="page-header__item" href="/questions.html">Вопросы</a></li>
+                    <li><a class="page-header__item" href="/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="page-header__container-right">
+                <button class="page-header__button">Заказать</button>
+                <a class="page-header__tel-link" href="tel:+88005553575">8 (800) 555 35 75</a>
+            </div>
         </header>
-
-        <main class="page-main">
+        <main class="page-main page-main--two-columns">
+            <section class="explanation">
+                <h2 class="explanation__heading heading">Что такое VR-планетарий?</h2>
+                <p class="explanation__text text">Это образовательная программа, использующая технологию виртуальной реальности. </p>
+                <p class="explanation__text text">Зрителям выдаются очки виртуальной реальности, оператор запускает сеанс планетария 
+                на всех очках одновременно. В коллекции фильмов идут обучающие картины о космосе, астрономии
+                и обществознании. </p>
+                <p class="explanation__text text">За счёт реалестичности  и имитации игры такое обучение повышает мотивацию и стимулирует 
+                активную мозговую деятельность ребёнка. </p>
+            </section>
+            <article class="gallery">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                        <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            <button class="next">Далее</button>
+            <button class="prev">Назад</button>
+            </article>
         </main>
-
         <footer class="page-footer">
+            <div class="page-footer__social-container">
+                <a href="#" class="page-footer__social-link">
+                    <img class="page-footer__social-icon" src="./image/facebook.svg" alt="Мы в фейсбук">
+                </a>
+                <a href="#" class="page-footer__social-link">
+                    <img class="page-footer__social-icon" src="./image/VK.svg" alt="Мы в Вконтакте">
+                </a>
+            </div>
+            <div class="page-footer__scroll-container">
+                <a href="#" class="page-footer__scroll-text">Скролл вниз</a>
+            </div>
         </footer>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+    
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                },
+    
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.next',
+                    prevEl: '.prev',
+                },
+        });
+        </script>
     </body>
 </html>
