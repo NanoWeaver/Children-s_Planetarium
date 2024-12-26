@@ -5,13 +5,13 @@
         <title>VR планетарий</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Сайт образовательного виртуального планетария Digital Planet VR">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
         <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body class="body">
         <header class="page-header">
@@ -55,10 +55,13 @@
                         <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
                     </div>
                     <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
                 </div>
-            <button class="next">Далее</button>
-            <button class="prev">Назад</button>
+                <div class="gallery__management-container">
+                    <span class="gallery__swiper-pagination"></span>
+                    <button class="gallery__button-next">Далее</button>
+                    <button class="gallery__button-prev">Назад</button>
+                </div>
+                <p class="gallery__text">Что показываем в планетарии</p>
             </article>
         </main>
         <footer class="page-footer">
@@ -82,14 +85,14 @@
     
                 // If we need pagination
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.gallery__swiper-pagination',
                     type: 'fraction',
                 },
     
                 // Navigation arrows
                 navigation: {
-                    nextEl: '.next',
-                    prevEl: '.prev',
+                    nextEl: '.gallery__button-next',
+                    prevEl: '.gallery__button-prev',
                 },
         });
         </script>

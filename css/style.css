@@ -282,3 +282,17 @@ body {
 .gallery {
     padding-top: 281px;
 }
+
+.swiper {
+   outline: 4px solid var(--brand-brighter);
+    transform: translateX(-50px);
+}
+
+.gallery__management-container {
+    display: flex;
+    justify-content: end;
+}
+
+.gallery__swiper-pagination {
+    width: auto;
+}
