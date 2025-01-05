@@ -43,58 +43,38 @@
                 активную мозговую деятельность ребёнка. </p>
             </section>
             <article class="gallery">
-                <!-- Slider main container -->
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                    <!-- Slides -->
-                        <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
+                <div class="gallery__swiper-container">
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                            <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./image/astronaut.png" alt=""></div>
+                        </div>
+                        <!-- If we need pagination -->
                     </div>
-                    <!-- If we need pagination -->
+                    <p class="gallery__text">Что показываем в планетарии</p>
                 </div>
                 <div class="gallery__management-container">
                     <span class="gallery__swiper-pagination"></span>
-                    <button class="gallery__button-next">Далее</button>
-                    <button class="gallery__button-prev">Назад</button>
+                    <button class="gallery__button gallery__button--prev">
+                        <img src="./image/prev.svg" alt="">
+                    </button>
+                    <button class="gallery__button gallery__button--next">
+                        <img src="./image/next.svg" alt="">
+                    </button>
                 </div>
-                <p class="gallery__text">Что показываем в планетарии</p>
             </article>
         </main>
-        <footer class="page-footer">
-            <div class="page-footer__social-container">
-                <a href="#" class="page-footer__social-link">
-                    <img class="page-footer__social-icon" src="./image/facebook.svg" alt="Мы в фейсбук">
-                </a>
-                <a href="#" class="page-footer__social-link">
-                    <img class="page-footer__social-icon" src="./image/VK.svg" alt="Мы в Вконтакте">
-                </a>
-            </div>
+        <footer class="page-footer page-footer--pointer-centered">
             <div class="page-footer__scroll-container">
-                <a href="#" class="page-footer__scroll-text">Скролл вниз</a>
+                <a href="#" class="page-footer__scroll-text page-footer__scroll-text--no-text"></a>
             </div>
         </footer>
-        <script>
-            const swiper = new Swiper('.swiper', {
-                // Optional parameters
-                direction: 'horizontal',
-                loop: true,
-    
-                // If we need pagination
-                pagination: {
-                    el: '.gallery__swiper-pagination',
-                    type: 'fraction',
-                },
-    
-                // Navigation arrows
-                navigation: {
-                    nextEl: '.gallery__button-next',
-                    prevEl: '.gallery__button-prev',
-                },
-        });
-        </script>
+        <script src="./script/script.js"></script>
     </body>
 </html>
