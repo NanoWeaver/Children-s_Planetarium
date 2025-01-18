@@ -88,6 +88,7 @@ body {
     background-position: 0 0 ;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    max-width: 1366px;
 }
 
 .page-main {
@@ -452,4 +453,119 @@ body {
     position: absolute;
     right: -265px;
     top: 15px;
+}
+
+/* Не могу понять почему страница tehnology получилась на 12px выше */
+
+.technology {
+    padding-top: 76px;
+}
+
+.technology__heading {
+    margin: 0;
+}
+
+.product-box {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 28px;
+    padding-bottom: 54px;
+    padding-top: 62px;
+    width: 1060px;
+}
+
+.product-box__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 279px;
+    padding-top: 11px;
+}
+
+.product-box__text-shell {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.product-box__heading {
+    position: relative;
+    font-size: 21px;
+    font-weight: bold;
+    color: var(--base-font-color);
+    margin: 0;
+}
+
+.product-box__heading--technology-pointer1::after {
+    content: url("../image/technology_pointer1.svg");
+    position: absolute;
+    right: -112px;
+    top: 11px;
+    z-index: 1;
+}
+
+.product-box__heading--technology-pointer2::after {
+    content: url("../image/technology_pointer2.svg");
+    position: absolute;
+    left: 166px;
+    bottom: 4px;
+    z-index: 1;
+}
+
+.product-box__heading--technology-pointer3::after {
+    content: url("../image/technology_pointer3.svg");
+    position: absolute;
+    left: -256px;
+    top: 13px;
+    z-index: 1;
+}
+
+.product-box__heading--technology-pointer4::after {
+    content: url("../image/technology_pointer4.svg");
+    position: absolute;
+    left: -134px;
+    bottom: 5px;
+    z-index: 1;
+}
+
+.product-box__button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: var(--brand);
+    border: 0;
+    padding-left: 11px;
+    padding-top: 11px;
+    cursor: pointer;
+}
+
+.product-box__text {
+    font-size: var(--light);
+    font-weight: lighter;
+    color: var(--base-font-color);
+    margin: 0;
+}
+
+.product-box__image-shell {
+    position: relative;
+}
+
+.product-box__image-shell::after {
+    content: url("../image/technology_obuch.svg");
+    position: absolute;
+    left: -36px;
+    top: -36px;
+}
+
+.product-box__image {
+    display: block;
+}
+
+.product-box__image--position-absolute {
+    position: absolute;
+    left: 11px;
+    top: 104.5px;
 }
