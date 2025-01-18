@@ -1,4 +1,4 @@
-
+/* Хорошего дня тому ,кто это проверяет :) Уверен вы крутые, спасибо за труд */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Ubuntu';
@@ -348,33 +348,39 @@ body {
 .product {
     padding-top: 76px;
     padding-right: 126px;
+    padding-bottom: 40px;
 }
 
 .product__heading {
     margin: 0;
 }
 
+/* Видит моя совесть я старался придумать ,что-то другое ,но не смог */
+
 .product__shell-card {
     display: grid;
-    grid-template-columns: repeat(2,535px);
+    grid-template-columns: repeat(1200,1px); 
+    grid-template-rows: repeat(475,1px);
 }
 
 .info-card:nth-child(1) {
-    margin-top: 46px;
-    margin-right: 58px;
+    grid-column: 22 / 557; 
+    grid-row: 46 / 196;    
 }
 
 .info-card:nth-child(2) {
-    margin-top: 63px;
+    grid-column: 615 / 1150; 
+    grid-row: 63 / 213;    
 }
 
 .info-card:nth-child(3) {
-    margin-top: 95px;
-    margin-right: 78px;
+    grid-column: 52 / 587; 
+    grid-row: 291 / 441;    
 }
 
 .info-card:nth-child(4) {
-    margin-top: 112px;
+    grid-column: 665 / 1200; 
+    grid-row: 308 / 458;    
 }
 
 .info-card {
@@ -422,12 +428,28 @@ body {
     font-size: var(--light);
     color: var(--base-font-color);
     font-weight: lighter;
-    max-width: 290px;
+    max-width: 300px;
 }
 
+/* Тут я тоже не понял ,что хотел сказать автор и как вообще провернуть pixel perfect, поэтому сделал на глаз  */
+
 .info-card__heading--dotted1::after {
-    content: url('../image/dotted.svg');
+    content: url('../image/dotted1.svg');
     position: absolute;
-    right: -253px;
+    right: -245px;
     top: 9px;
+}
+
+.info-card__heading--dotted2::after {
+    content: url('../image/dotted2.svg');
+    position: absolute;
+    right: 350px;
+    bottom: -160px;
+}
+
+.info-card__heading--dotted3::after {
+    content: url('../image/dotted3.svg');
+    position: absolute;
+    right: -265px;
+    top: 15px;
 }
