@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body class="body body--first-page">
+    <body class="body">
         <header class="page-header">
             <a href="/index.html">
                 <img class="page-header__logo" src="./image/Logo-Group.svg" alt="Логотип компании">
@@ -28,34 +28,79 @@
             </div>
         </header>
         <main class="page-main">
-            <section class="hero">
-                <h1 class="hero__heading">Digital Planet VR</h1>
-                <p class="hero__subtitle">
-                    Образовательный виртуальный планетарий в Новороссийске.
-                    Познавательное приключение в мир звёзд и галактик.
-                </p>
-                <button class="hero__button hero__button--filled">
-                    <img src="./image/ticket.svg" alt="">
-                    Заказать
-                </button>
-                <button class="hero__button">
-                    <img src="./image/video.svg" alt="">
-                    Видео
-                </button>
+            <section class="questions">
+                <h1 class="questions__heading heading">Часто задаваемые вопросы</h1>
+                <div class="accordion">
+                    <div class="accordion__label">
+                        <div class="accordion__heading-shell">
+                            <h2 class="accordion__heading">Безопасны ли VR-очки для зрения ребёнка? Какие есть ограничения?</h2>
+                        </div>
+                        <div class="accordion__indicator"></div>
+                    </div>
+                    <div class="accordion__content">
+                        <p class="accordion__text">
+                            VR-очки были разработаны специально для того, чтобы каждый человек, независимо от возраста, качества зрения 
+                            и опыта использования аналогичных продуктов мог безопасно и легко пользоваться этой технологией. У нас есть 
+                            сертификат качества продукции и лицензия для её использования на территории РФ. Для людей с зрением, отличным 
+                            от идеального, на VR-очках предусмотрена регулировка диоптрий.  
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion__label">
+                        <div class="accordion__heading-shell">
+                            <h2 class="accordion__heading">Безопасны ли VR-очки для зрения ребёнка? Какие есть ограничения?</h2>
+                        </div>
+                        <div class="accordion__indicator"></div>
+                    </div>
+                    <div class="accordion__content">
+                        <p class="accordion__text">
+                            VR-очки были разработаны специально для того, чтобы каждый человек, независимо от возраста, качества зрения 
+                            и опыта использования аналогичных продуктов мог безопасно и легко пользоваться этой технологией. У нас есть 
+                            сертификат качества продукции и лицензия для её использования на территории РФ. Для людей с зрением, отличным 
+                            от идеального, на VR-очках предусмотрена регулировка диоптрий.  
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion__label">
+                        <div class="accordion__heading-shell">
+                            <h2 class="accordion__heading">Безопасны ли VR-очки для зрения ребёнка? Какие есть ограничения?</h2>
+                        </div>
+                        <div class="accordion__indicator"></div>
+                    </div>
+                    <div class="accordion__content">
+                        <p class="accordion__text">
+                            VR-очки были разработаны специально для того, чтобы каждый человек, независимо от возраста, качества зрения 
+                            и опыта использования аналогичных продуктов мог безопасно и легко пользоваться этой технологией. У нас есть 
+                            сертификат качества продукции и лицензия для её использования на территории РФ. Для людей с зрением, отличным 
+                            от идеального, на VR-очках предусмотрена регулировка диоптрий.  
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion__label">
+                        <div class="accordion__heading-shell">
+                            <h2 class="accordion__heading">Безопасны ли VR-очки для зрения ребёнка? Какие есть ограничения?</h2>
+                        </div>
+                        <div class="accordion__indicator"></div>
+                    </div>
+                    <div class="accordion__content">
+                        <p class="accordion__text">
+                            VR-очки были разработаны специально для того, чтобы каждый человек, независимо от возраста, качества зрения 
+                            и опыта использования аналогичных продуктов мог безопасно и легко пользоваться этой технологией. У нас есть 
+                            сертификат качества продукции и лицензия для её использования на территории РФ. Для людей с зрением, отличным 
+                            от идеального, на VR-очках предусмотрена регулировка диоптрий.  
+                        </p>
+                    </div>
+                </div>
             </section>
         </main>
-        <footer class="page-footer">
-            <div class="page-footer__social-container">
-                <a href="#" class="page-footer__social-link">
-                    <img class="page-footer__social-icon" src="./image/facebook.svg" alt="Мы в фейсбук">
-                </a>
-                <a href="#" class="page-footer__social-link">
-                    <img class="page-footer__social-icon" src="./image/VK.svg" alt="Мы в Вконтакте">
-                </a>
-            </div>
+        <footer class="page-footer page-footer--pointer-centered">
             <div class="page-footer__scroll-container">
-                <a href="#" class="page-footer__scroll-text">Скролл вниз</a>
+                <a href="#" class="page-footer__scroll-text page-footer__scroll-text--no-text"></a>
             </div>
         </footer>
+        <script src="./script/accordion.js"></script>
     </body>
 </html>

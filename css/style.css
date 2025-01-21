@@ -67,6 +67,8 @@
     --btn-small: 14px;
     --btn-big: 21px;
     --tel-small: 15px;
+    --text-small: 15px;
+    --placeholder: 13px;
     --h1: 96px;
     --h2: 44px;
     --h3: 24px;
@@ -568,4 +570,197 @@ body {
     position: absolute;
     left: 11px;
     top: 104.5px;
+}
+
+.questions{
+    padding-top: 76px;
+    padding-bottom: 48px;
+}
+
+.questions__heading {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.accordion {
+    height: 72px;
+    width: 904px;
+    color: var(--black);
+    background-color: var(--base-font-color);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 5px;
+}
+
+.accordion:last-child {
+    margin-bottom: 0;
+}
+
+.accordion__label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion__heading-shell {
+    padding: 20px 39px 24px ;
+}
+
+.accordion__heading {
+    margin: 0;
+    font-size: 21px;
+    font-weight: normal;
+    line-height: 1.32em;
+}
+
+.accordion__heading::before {
+    content: url('../image/questions_marker.svg');
+    display: inline-block;
+    height: 7px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    vertical-align: middle;
+}
+
+.accordion__indicator {
+    position: relative;
+    background-color: var(--brand);
+    width: 72px;
+    color: var(--base-font-color);
+}
+
+.accordion__indicator::before {
+    content: url('../image/+.svg');
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 22px;
+    top: 22px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* .accordion__heading::marker {
+    content: url('../image/questions_marker.svg');
+    margin-right: 10px;
+} */
+
+.accordion__content {
+    padding-left: 50px;
+    padding-bottom: 30px;
+    padding-right: 214px;
+}
+
+.accordion__text {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.accordion--rotation::before {
+    transform: rotate(45deg);
+}
+
+.accordion--visible {
+    overflow: visible;
+    height: auto;
+}
+
+.contacts {
+    padding-top: 76px;
+    padding-bottom: 131px;
+}
+
+.contacts__block {
+    display: flex;
+    column-gap: 100px;
+    padding-left: 30px;
+}
+
+.contacts__address-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.contacts__address-shell {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    color: var(--base-font-color);
+}
+
+.contacts__city {
+    font-size: var(--h4);
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.contacts__link {
+    text-decoration: none;
+    color: var(--base-font-color);
+    font-size: 15px;
+    font-weight: lighter;
+    line-height: 1.3em;
+}
+
+.contacts__form-block {
+    display: flex;
+    flex-direction: column;
+    color: var(--base-font-color);
+    width: 570px;
+}
+
+.contacts__form-heading {
+    font-size: var(--h4);
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+
+.contacts__subtitle {
+    font-size: var(--text-small);
+    font-weight: lighter;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.contacts__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__input-shell {
+    display: flex;
+    margin-bottom: 10px;
+    column-gap: 10px;
+}
+
+.contacts__input {
+    padding: 15px 15px 14px;
+    font-size: var(--placeholder);
+    line-height: 1.3em;
+    width: 50%;
+    border: 0;
+}
+
+.contacts__textarea {
+    box-sizing: border-box;
+    padding: 15px 15px 14px;
+    margin-bottom: 20px;
+    resize: none;
+    font-size: var(--placeholder);
+    line-height: 1.3em;
+    border: 0;
+    height: 144px;
+}
+
+.contacts__form-button {
+    padding: 9px 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid var(--brand-brighter);
+    background-color: transparent;
+    color: var(--base-font-color);
+    width: 120px;
 }
