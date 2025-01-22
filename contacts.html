@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body class="body body--first-page">
+    <body class="body">
         <header class="page-header">
             <a href="/index.html">
                 <img class="page-header__logo" src="./image/Logo-Group.svg" alt="Логотип компании">
@@ -28,34 +28,46 @@
             </div>
         </header>
         <main class="page-main">
-            <section class="hero">
-                <h1 class="hero__heading">Digital Planet VR</h1>
-                <p class="hero__subtitle">
-                    Образовательный виртуальный планетарий в Новороссийске.
-                    Познавательное приключение в мир звёзд и галактик.
-                </p>
-                <button class="hero__button hero__button--filled">
-                    <img src="./image/ticket.svg" alt="">
-                    Заказать
-                </button>
-                <button class="hero__button">
-                    <img src="./image/video.svg" alt="">
-                    Видео
-                </button>
+            <section class="contacts">
+                <h1 class="contacts__heading heading">Контакты</h1>
+                <div class="contacts__block">
+                    <div class="contacts__address-block">
+                        <div class="contacts__address-shell">
+                            <h2 class="contacts__city">Новороссийск</h2>
+                            <a href="tel:+79234650141" class="contacts__link">+7 (923) 465 – 01 – 41</a>
+                            <a href="mailto:digitalPlanetNR@mail.ru" class="contacts__link">digitalPlanetNR@mail.ru</a>
+                        </div>
+                        <div class="contacts__address-shell">
+                            <h2 class="contacts__city">Москва</h2>
+                            <a href="tel:+74958552419" class="contacts__link">+7 (495) 855 – 24 – 19</a>
+                            <a href="mailto:digitalPlanetMoscow@mail.ru" class="contacts__link">digitalPlanetMoscow@mail.ru</a>
+                        </div>
+                        <div class="contacts__address-shell">
+                            <h2 class="contacts__city">Саратов</h2>
+                            <a href="tel:+79422212178" class="contacts__link">+7 (942) 221 – 21 – 78</a>
+                            <a href="mailto:digitalPlanetSaratov@mail.ru" class="contacts__link">digitalPlanetSaratov@mail.ru</a>
+                        </div>
+                    </div>
+                    <div class="contacts__form-block">
+                        <h2 class="contacts__form-heading">Остались вопросы? Задайте их нам!</h2>
+                        <p class="contacts__subtitle">Мы обязательно свяжемся с вами в течение двух рабочих дней</p>
+                        <form class="contacts__form" action="">
+                            <div class="contacts__input-shell">
+                                <input class="contacts__input" type="text" placeholder="Ваше имя">
+                                <input class="contacts__input" type="text" placeholder="Ваш e-mail">
+                            </div>
+                            <textarea class="contacts__textarea" name="" id="" placeholder="Что вас интересует?" ></textarea>
+                            <button class="contacts__form-button">Отправить</button>
+                        </form>
+                    </div>
+                </div>
             </section>
         </main>
-        <footer class="page-footer">
-            <div class="page-footer__social-container">
-                <a href="#" class="page-footer__social-link">
-                    <img class="page-footer__social-icon" src="./image/facebook.svg" alt="Мы в фейсбук">
-                </a>
-                <a href="#" class="page-footer__social-link">
-                    <img class="page-footer__social-icon" src="./image/VK.svg" alt="Мы в Вконтакте">
-                </a>
-            </div>
+        <footer class="page-footer page-footer--pointer-centered">
             <div class="page-footer__scroll-container">
-                <a href="#" class="page-footer__scroll-text">Скролл вниз</a>
+                <a href="#" class="page-footer__scroll-text page-footer__scroll-text--no-text"></a>
             </div>
         </footer>
+        <script src="./script/accordion.js"></script>
     </body>
 </html>
