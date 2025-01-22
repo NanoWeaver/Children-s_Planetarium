@@ -304,6 +304,7 @@ button ,
     font-size: var(--btn-big);
     font-weight: 700;
     color: var(--base-font-color);
+    letter-spacing: 0.03em;
 }
 
 .hero__button--filled {
@@ -339,13 +340,15 @@ button ,
 .page-footer__scroll-text {
     display: block;
     position: relative;
-    padding-top: 2px;
     height: 100%;
+    min-height: 7px;
     width: 288px;
     text-transform: uppercase;
     text-decoration: none;
     font-size: var(--scroll);
     text-align: center;
+    line-height: 1.379em;
+    letter-spacing: 0.12em;
     color:var(--base-font-color);
     opacity: 0.64;
 }
@@ -376,7 +379,7 @@ button ,
 .page-main--two-columns {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 13px;
+    padding-bottom: 24px;
 }
 
 .explanation {
@@ -424,6 +427,14 @@ button ,
     width: auto;
     color: var(--base-font-color);
     font-size: var(--swiper-pagination);
+}
+
+.swiper-pagination-current {
+    font-weight: 500;
+}
+
+.swiper-pagination-total {
+    opacity: 0.87;
 }
 
 .gallery__button {
@@ -518,6 +529,8 @@ button ,
     font-size: var(--h4);
     color: var(--base-font-color);
     font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
     max-width: 110px;
     position: relative;
 }
@@ -526,7 +539,9 @@ button ,
     font-size: var(--light);
     color: var(--base-font-color);
     font-weight: lighter;
+    line-height: 1.3em;
     max-width: 300px;
+    margin: 0;
 }
 
 /* Тут я тоже не понял ,что хотел сказать автор и как вообще провернуть pixel perfect, поэтому сделал на глаз  */
@@ -566,8 +581,9 @@ button ,
     display: flex;
     justify-content: space-between;
     padding-left: 28px;
-    padding-bottom: 54px;
-    padding-top: 62px;
+    padding-right: 58px;
+    padding-bottom: 61px;
+    padding-top: 73px;
     width: 1060px;
 }
 
@@ -589,6 +605,7 @@ button ,
     position: relative;
     font-size: 21px;
     font-weight: bold;
+    line-height: 1.321em;
     color: var(--base-font-color);
     margin: 0;
 }
@@ -642,12 +659,15 @@ button ,
 .product-box__text {
     font-size: var(--light);
     font-weight: lighter;
+    line-height: 1.3em;
     color: var(--base-font-color);
     margin: 0;
 }
 
 .product-box__image-shell {
     position: relative;
+    margin-right: 101px;
+    margin-left: 45px;
 }
 
 .product-box__image-shell::after {
@@ -703,8 +723,8 @@ button ,
 .accordion__heading {
     margin: 0;
     font-size: 21px;
-    font-weight: normal;
-    line-height: 1.32em;
+    font-weight: 500;
+    line-height: 1.321em;
 }
 
 .accordion__heading::before {
@@ -741,7 +761,6 @@ button ,
 
 .accordion__content {
     padding-left: 50px;
-    padding-bottom: 30px;
     padding-right: 214px;
     height: 0; /* Начальная высота скрытого контента */
     overflow: hidden; /* Скрыть контент для анимации */
@@ -751,6 +770,9 @@ button ,
 .accordion__text {
     font-size: 15px;
     font-weight: lighter;
+    line-height: 1.5em;
+    margin: 0;
+    margin-bottom: 30px;
 }
 
 .accordion--rotation::before {
@@ -760,6 +782,12 @@ button ,
 .accordion--visible {
     overflow: visible;
     height: auto;
+}
+
+.questions__footer-image {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
 }
 
 .contacts {
@@ -862,4 +890,5 @@ button ,
     background-color: transparent;
     color: var(--base-font-color);
     width: 120px;
+    letter-spacing: 0.03em;
 }
