@@ -63,6 +63,7 @@
     --brand-brighter: #0dd1a2;
     --base-font-color: #ffffff;
     --black: #1c1c1c;
+    --black-transparent: rgba(28, 28, 28, 0.4);
     --menu: 15px;
     --btn-small: 14px;
     --btn-big: 21px;
@@ -91,6 +92,100 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     max-width: 1366px;
+}
+
+a , 
+button ,
+.popup__close {
+    cursor: url('../image/cursor.png') 15 10, pointer;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+}
+
+.popup {
+    display: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px 79px 58px 81px;
+    background-color: #F3F3F3;
+    z-index: 2;
+    text-align: center;
+}
+
+.popup--open {
+    display: block;
+}
+
+.popup__close {
+    position: absolute;
+    top: 8px;
+    right: 18px;
+}
+
+.popup__heading {
+    color: var(--black);
+    font-size: var(--h4);
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+
+.popup__subtitle {
+    color: var(--black);
+    font-size: 15px;
+    font-weight: lighter;
+    line-height: 1.3em;
+    opacity: 0.64;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup__input {
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height: 1.3em;
+    padding: 15px 21.43px 14px;
+    color: var(--black-transparent);
+    margin-bottom: 9px;
+    border: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.popup__input:nth-child(2) {
+    margin-bottom: 30px;
+}
+
+.popup__button {
+    padding: 9px 17.36px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid var(--brand-brighter);
+    background-color: transparent;
+    color: var(--black-transparent);
+    letter-spacing: 0.03em;
 }
 
 .page-main {
@@ -588,7 +683,7 @@ body {
     color: var(--black);
     background-color: var(--base-font-color);
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
     margin-bottom: 5px;
 }
 
@@ -617,8 +712,9 @@ body {
     display: inline-block;
     height: 7px;
     margin-right: 10px;
-    margin-bottom: 15px;
     vertical-align: middle;
+    line-height: 0em;
+    font-size: 0;
 }
 
 .accordion__indicator {
@@ -647,6 +743,9 @@ body {
     padding-left: 50px;
     padding-bottom: 30px;
     padding-right: 214px;
+    height: 0; /* Начальная высота скрытого контента */
+    overflow: hidden; /* Скрыть контент для анимации */
+    transition: height 0.3s ease-in-out; /* Анимация изменения высоты контента */
 }
 
 .accordion__text {
