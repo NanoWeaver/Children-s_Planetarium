@@ -39,8 +39,8 @@
                         течении двух рабочих дней и перезвоним вам.
                     </p>
                     <form action="" class="popup__form">
-                        <input type="text" class="popup__input" placeholder="Ваше имя">
-                        <input type="text" class="popup__input" placeholder="Ваш телефон">
+                        <input type="text" class="popup__input" placeholder="Ваше имя" maxlength="50">
+                        <input type="tel" class="popup__input feedback-form-tel" placeholder="Ваш телефон" maxlength="18">
                         <button class="popup__button">Отправить</button>
                     </form>
                 </div>
@@ -68,12 +68,12 @@
                     <div class="contacts__form-block">
                         <h2 class="contacts__form-heading">Остались вопросы? Задайте их нам!</h2>
                         <p class="contacts__subtitle">Мы обязательно свяжемся с вами в течение двух рабочих дней</p>
-                        <form class="contacts__form" action="">
+                        <form class="contacts__form" action="" novalidate>
                             <div class="contacts__input-shell">
-                                <input class="contacts__input" type="text" placeholder="Ваше имя">
-                                <input class="contacts__input" type="text" placeholder="Ваш e-mail">
+                                <input class="contacts__input contacts__input--valid-text" type="text" placeholder="Ваше имя">
+                                <input class="contacts__input contacts__input--valid-email" type="email" placeholder="Ваш e-mail">
                             </div>
-                            <textarea class="contacts__textarea" name="" id="" placeholder="Что вас интересует?" ></textarea>
+                            <textarea class="contacts__textarea" name="" id="" placeholder="Что вас интересует?" required></textarea>
                             <button class="contacts__form-button">Отправить</button>
                         </form>
                     </div>
@@ -87,5 +87,7 @@
         </footer>
         <script src="./script/accordion.js"></script>
         <script src="./script/popup.js"></script>
+        <script src="./script/maskinput.js"></script>
+        <script src="./script/validator.js"></script>
     </body>
 </html>

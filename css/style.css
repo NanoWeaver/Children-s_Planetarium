@@ -62,6 +62,8 @@
     --brand: #15b28d;
     --brand-brighter: #0dd1a2;
     --base-font-color: #ffffff;
+    --correct: #1DC04B;
+    --incorrect: #F97676;
     --black: #1c1c1c;
     --black-transparent: rgba(28, 28, 28, 0.4);
     --menu: 15px;
@@ -171,11 +173,19 @@ a:hover {
     font-size: 13px;
     line-height: 1.3em;
     padding: 15px 21.43px 14px;
-    color: var(--black-transparent);
+    color: var(--black);
     margin-bottom: 9px;
     border: 0;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
     width: 100%;
+}
+
+.popup__input:focus {
+    outline: 2px solid var(--brand-brighter);
+}
+
+.popup__input::placeholder {
+    color: var(--black-transparent);
 }
 
 .popup__input:nth-child(2) {
@@ -952,6 +962,26 @@ a:hover {
     border: 0;
 }
 
+.contacts__input--invalid {
+    display: flex;
+    align-items: center;
+    outline: 2px solid var(--incorrect);
+}
+
+.contacts__input--invalid::after {
+    content: '';
+}
+
+.contacts__input--valid {
+    display: flex;
+    align-items: center;
+    outline: 2px solid var(--correct);
+}
+
+.contacts__input--valid::after {
+    content: '';
+}
+
 .contacts__textarea {
     box-sizing: border-box;
     padding: 15px 15px 14px;
@@ -961,6 +991,11 @@ a:hover {
     line-height: 1.3em;
     border: 0;
     height: 144px;
+}
+
+.contacts__input:focus,
+.contacts__textarea:focus {
+    outline: 2px solid var(--brand-brighter);
 }
 
 .contacts__form-button {
@@ -973,4 +1008,9 @@ a:hover {
     color: var(--base-font-color);
     width: 120px;
     letter-spacing: 0.03em;
+}
+
+.contacts__form-button:hover {
+    background-color: var(--brand-brighter);
+    border-color: var(--brand-brighter);
 }
