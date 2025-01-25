@@ -21,6 +21,8 @@ const buttonNext = document.querySelector('.gallery__button--next')
 const buttonPrev = document.querySelector('.gallery__button--prev')
 let cooldown = false
 
+// Это для реализации количества слайдов в галлереи ,что было 01 ,а не просто 1
+
 function paginationTransform() { // Добавление нуля перед числом 
     if (paginationTotal.textContent < 10 && paginationTotal.textContent[0] != 0) {
         paginationTotal.textContent = '0' + paginationTotal.textContent;

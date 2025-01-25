@@ -3,6 +3,7 @@ let close = document.querySelector('.popup__close');
 let send = document.querySelector('.popup__button');
 let popup = document.querySelector('.popup');
 let overlay = document.querySelector('.overlay');
+let popupInputShells = document.querySelectorAll('.popup__input-shell');
 
 open.addEventListener('click', () => { // Обработка клика на кнопку Заказать
     popup.classList.add('popup--open');
@@ -36,8 +37,12 @@ send.addEventListener('click', () => { // Обработка клика на к�
     header.textContent = 'Сообщение успешно отправлено!';
     header.style.marginBottom = 10 + 'px';
     // Меняем подзаголовок
-    subtitle.style.marginBottom = 30 + 'px';
+    subtitle.style.marginBottom = 28 + 'px';
     subtitle.textContent = 'Мы обязательно свяжемся с вами в ближайшее время и подробно ответим на ваш вопрос, будьте на связи!';
+    // Убираем отступы для обертки инпутов
+    for (const popupInputShell of popupInputShells) {
+        popupInputShell.style.marginBottom = 0;
+    }
     // Меняем кнопку
     send.style.padding = 9 + 'px ' + 35.39 + 'px ' + 8 + 'px ' + 34.61 + 'px';
     send.textContent = 'ОК';

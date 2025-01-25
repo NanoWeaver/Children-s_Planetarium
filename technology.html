@@ -38,10 +38,14 @@
                         Оставьте ваши контактные данные, мы обработаем заявку в 
                         течении двух рабочих дней и перезвоним вам.
                     </p>
-                    <form action="" class="popup__form">
-                        <input type="text" class="popup__input" placeholder="Ваше имя" maxlength="50">
-                        <input type="text" class="popup__input feedback-form-tel" placeholder="Ваш телефон" maxlength="18">
-                        <button class="popup__button">Отправить</button>
+                    <form action="#" class="popup__form" novalidate>
+                        <div class="popup__input-shell">
+                            <input type="text" class="popup__input popup__input--valid-text" placeholder="Ваше имя" maxlength="50">
+                        </div>
+                        <div class="popup__input-shell">
+                            <input type="tel" class="popup__input feedback-form-tel popup__input--valid-tel" placeholder="Ваш телефон" maxlength="18">
+                        </div>
+                        <button class="popup__button" disabled="false">Отправить</button>
                     </form>
                 </div>
             </section>
@@ -105,5 +109,6 @@
         </footer>
         <script src="./script/popup.js"></script>
         <script src="./script/maskinput.js"></script>
+        <script src="./script/validator-popup.js"></script>
     </body>
 </html>

@@ -38,10 +38,14 @@
                         Оставьте ваши контактные данные, мы обработаем заявку в 
                         течении двух рабочих дней и перезвоним вам.
                     </p>
-                    <form action="" class="popup__form">
-                        <input type="text" class="popup__input" placeholder="Ваше имя" maxlength="50">
-                        <input type="tel" class="popup__input feedback-form-tel" placeholder="Ваш телефон" maxlength="18">
-                        <button class="popup__button">Отправить</button>
+                    <form action="#" class="popup__form" novalidate>
+                        <div class="popup__input-shell">
+                            <input type="text" class="popup__input popup__input--valid-text" placeholder="Ваше имя" maxlength="50">
+                        </div>
+                        <div class="popup__input-shell">
+                            <input type="tel" class="popup__input feedback-form-tel popup__input--valid-tel" placeholder="Ваш телефон" maxlength="18">
+                        </div>
+                        <button class="popup__button" disabled="false">Отправить</button>
                     </form>
                 </div>
             </section>
@@ -69,12 +73,16 @@
                         <h2 class="contacts__form-heading">Остались вопросы? Задайте их нам!</h2>
                         <p class="contacts__subtitle">Мы обязательно свяжемся с вами в течение двух рабочих дней</p>
                         <form class="contacts__form" action="" novalidate>
-                            <div class="contacts__input-shell">
-                                <input class="contacts__input contacts__input--valid-text" type="text" placeholder="Ваше имя">
-                                <input class="contacts__input contacts__input--valid-email" type="email" placeholder="Ваш e-mail">
+                            <div class="contacts__input-box">
+                                <div class="contacts__input-shell">
+                                    <input class="contacts__input contacts__input--valid-text" type="text" placeholder="Ваше имя" maxlength="50">
+                                </div>
+                                <div class="contacts__input-shell">
+                                    <input class="contacts__input contacts__input--valid-email" type="email" placeholder="Ваш e-mail" maxlength="50">
+                                </div>
                             </div>
                             <textarea class="contacts__textarea" name="" id="" placeholder="Что вас интересует?" required></textarea>
-                            <button class="contacts__form-button">Отправить</button>
+                            <button class="contacts__form-button" disabled>Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -89,5 +97,6 @@
         <script src="./script/popup.js"></script>
         <script src="./script/maskinput.js"></script>
         <script src="./script/validator.js"></script>
+        <script src="./script/validator-popup.js"></script>
     </body>
 </html>

@@ -1,65 +1,116 @@
-let inputText = document.querySelector('.contacts__input--valid-text');
+// Я не сообразил куда выводить подсказки по заполнению ,по макету они должны быть под инпутом ,но места там нет. Будто макет сам себе противоречит
+// Да и я не придумал ,как реализовать это без простыни кода.
+let inputText = document.querySelector('.contacts__input--valid-text')
 let inputEmail = document.querySelector('.contacts__input--valid-email');
-let button = document.querySelector('.contacts__form-button');
+let buttonContacts = document.querySelector('.contacts__form-button');
 
-
-inputText.addEventListener('blur', () => { // Вешаем обработку снятия фокуса с инпута
-    if (inputText.value) { // Проверям есть ли вообще текст в инпуте
+function validationTextCheck(input) {
+    if (input.value) { // Проверям есть ли вообще текст в инпуте
         let valid = true;
 
-        //Если инпут не пуст, то перебераем его 
+        //Если инпут не пуст, то перебираем его 
 
-        for (let i = 0; i < inputText.value.length; i++) { 
-            if (!(/\p{L}/u.test(inputText.value[i]))) { // Используем регулярное выражение для проверки символа
+        for (let i = 0; i < input.value.length; i++) { 
+            if (!(/\p{L}/u.test(input.value[i]))) { // Используем регулярное выражение для проверки символа
                 valid = false;
             };
         };
 
         if (!valid) { // Если нашли не букву , то ошибка
-            inputText.classList.add('contacts__input--invalid');
+            input.classList.remove('contacts__input--valid');
+            input.parentNode.classList.remove('contacts__input-shell--valid')
+            
+            input.classList.add('contacts__input--invalid');
+            input.parentNode.classList.add('contacts__input-shell--invalid')
+
             console.log('Разрешены только буквенные символы');
-            console.log(inputText.value)
+            console.log(input.value)
         } else { // Хороший вариант ,когда всё ок
-            inputText.classList.remove('contacts__input--invalid');
-            inputText.classList.add('contacts__input--valid');
+            input.classList.remove('contacts__input--invalid');
+            input.parentNode.classList.remove('contacts__input-shell--invalid')
+
+            input.classList.add('contacts__input--valid');
+            input.parentNode.classList.add('contacts__input-shell--valid')
+
+            return true
         }
 
     } else { // Если инпут пуст, то выводим ошибку с рекомендацией
-        inputText.classList.remove('contacts__input--valid');
-        inputText.classList.add('contacts__input--invalid');
-        console.log('Поле обязательно для заполнения');
-        console.log(inputText.value)
-    }
-}) 
+        input.classList.remove('contacts__input--valid');
+        input.parentNode.classList.remove('contacts__input-shell--valid')
 
-inputEmail.addEventListener('blur', () => {
-    if (inputEmail.value) { // Проверям есть ли вообще текст в инпуте
+        input.classList.add('contacts__input--invalid');
+        input.parentNode.classList.add('contacts__input-shell--invalid')
+
+        console.log('Поле обязательно для заполнения');
+        console.log(input.value)
+    }
+}
+
+function validationEmailCheck(input) {
+    if (input.value) { // Проверям есть ли вообще текст в инпуте
         let valid = false;
         let counter = 0; // Счётчик чтоб избежать @@@
 
-        //Если инпут не пуст, то перебераем его 
+        //Если инпут не пуст, то перебираем его 
 
-        for (let i = 0; i < inputEmail.value.length; i++) { 
-            if (inputEmail.value[i] === '@') { // Ищём @ в строке
+        for (let i = 0; i < input.value.length; i++) { 
+            if (input.value[i] === '@') { // Ищём @ в строке
                 valid = true;
                 counter++
             };
         };
 
         if (!valid || counter > 1) { // Если не нашли знак собаки , то ошибка
-            inputEmail.classList.remove('contacts__input--valid');
-            inputEmail.classList.add('contacts__input--invalid');
+            input.classList.remove('contacts__input--valid');
+            input.parentNode.classList.remove('contacts__input-shell--valid')
+
+            input.classList.add('contacts__input--invalid');
+            input.parentNode.classList.add('contacts__input-shell--invalid')
+
             console.log('Для адресса нужна @');
-            console.log(inputEmail.value)
+            console.log(input.value)
         } else { // Хороший вариант ,когда всё ок
-            inputEmail.classList.remove('contacts__input--invalid');
-            inputEmail.classList.add('contacts__input--valid');
+            input.classList.remove('contacts__input--invalid');
+            input.parentNode.classList.remove('contacts__input-shell--invalid')
+
+            input.classList.add('contacts__input--valid');
+            input.parentNode.classList.add('contacts__input-shell--valid')
+
+            return true
         }
 
     } else { // Если инпут пуст, то выводим ошибку с рекомендацией
-        inputEmail.classList.remove('contacts__input--valid');
-        inputEmail.classList.add('contacts__input--invalid');
+        input.classList.remove('contacts__input--valid');
+        input.parentNode.classList.remove('contacts__input-shell--valid')
+
+        input.classList.add('contacts__input--invalid');
+        input.parentNode.classList.add('contacts__input-shell--invalid')
+
         console.log('Поле обязательно для заполнения');
-        console.log(inputEmail.value)
+        console.log(input.value)
     }
+}
+
+function checkingButtonLock(button, inputText, inputEmail) { // Функция блокировки кнопки пока нужные инпуты не валидны
+    if (validationTextCheck(inputText) === true && validationEmailCheck(inputEmail) === true) {
+        button.disabled = false;
+    } else {
+        button.disabled = true;
+    }
+}
+
+
+
+inputText.addEventListener('blur', () => { // Вешаем обработку снятия фокуса с инпута
+    validationTextCheck(inputText);
+    checkingButtonLock(buttonContacts,inputText,inputEmail);
+}) 
+
+
+inputEmail.addEventListener('blur', () => { // Вешаем обработку снятия фокуса с инпута
+    validationEmailCheck(inputEmail);
+    checkingButtonLock(buttonContacts,inputText,inputEmail);
 })
+
+
