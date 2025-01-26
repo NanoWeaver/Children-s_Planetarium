@@ -708,7 +708,7 @@ a:hover {
 .product-box__heading--technology-pointer1::after {
     content: url("../image/technology_pointer1.svg");
     position: absolute;
-    right: -112px;
+    right: -138px;
     top: 11px;
     z-index: 1;
 }
@@ -1048,4 +1048,25 @@ a:hover {
 .contacts__form-button:hover {
     background-color: var(--brand-brighter);
     border-color: var(--brand-brighter);
+}
+
+.page-footer--contacts {
+    justify-content: space-between;
+    align-items: center;
+    margin: 33px 77px;
+    padding: 0;
+}
+
+.page-footer__copyright,
+.page-footer__text {
+    font-size: 13px;
+    font-weight: lighter;
+    line-height: 1.3em;
+    color: var(--base-font-color);
+    opacity: 0.64;
+}
+
+.page-footer__social-shell {
+    display: flex;
+    column-gap: 9px;
 }
