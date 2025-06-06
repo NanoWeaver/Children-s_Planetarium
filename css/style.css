@@ -94,7 +94,7 @@ body {
     background-image: url('../image/base-page.png');
     background-position: 0 0 ;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     max-width: 1366px;
 }
 
@@ -107,6 +107,17 @@ button ,
 
 a:hover {
     color: var(--brand-brighter);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 .overlay {
@@ -137,6 +148,12 @@ a:hover {
 
 .popup--open {
     display: block;
+}
+
+.body--popup--open {
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .popup__close {
@@ -247,7 +264,7 @@ a:hover {
     background-image: url('../image/first-page.png');
     background-position: 0 0 ;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 
 .page-header {
@@ -547,6 +564,7 @@ a:hover {
     z-index: 1;
     width: 192px;
     text-align: right;
+    font-weight: normal;
 }
 
 .product {
@@ -706,7 +724,7 @@ a:hover {
 }
 
 .product-box__heading--technology-pointer1::after {
-    content: url("../image/technology_pointer1.svg");
+    content: url("../image/technology-pointer1.svg");
     position: absolute;
     right: -138px;
     top: 11px;
@@ -714,7 +732,7 @@ a:hover {
 }
 
 .product-box__heading--technology-pointer2::after {
-    content: url("../image/technology_pointer2.svg");
+    content: url("../image/technology-pointer2.svg");
     position: absolute;
     left: 166px;
     bottom: 4px;
@@ -722,7 +740,7 @@ a:hover {
 }
 
 .product-box__heading--technology-pointer3::after {
-    content: url("../image/technology_pointer3.svg");
+    content: url("../image/technology-pointer3.svg");
     position: absolute;
     left: -256px;
     top: 13px;
@@ -730,7 +748,7 @@ a:hover {
 }
 
 .product-box__heading--technology-pointer4::after {
-    content: url("../image/technology_pointer4.svg");
+    content: url("../image/technology-pointer4.svg");
     position: absolute;
     left: -134px;
     bottom: 5px;
@@ -771,7 +789,7 @@ a:hover {
 }
 
 .product-box__image-shell::after {
-    content: url("../image/technology_obuch.svg");
+    content: url("../image/technology-obuch.svg");
     position: absolute;
     left: -36px;
     top: -36px;
@@ -833,7 +851,7 @@ a:hover {
 }
 
 .accordion__heading::before {
-    content: url('../image/questions_marker.svg');
+    content: url('../image/questions-marker.svg');
     display: inline-block;
     height: 7px;
     margin-right: 10px;
@@ -851,7 +869,7 @@ a:hover {
 }
 
 .accordion__indicator::before {
-    content: url('../image/+.svg');
+    content: url('../image/plus-sign.svg');
     position: absolute;
     width: 28px;
     height: 28px;
@@ -861,7 +879,7 @@ a:hover {
 }
 
 /* .accordion__heading::marker {
-    content: url('../image/questions_marker.svg');
+    content: url('../image/questions-marker.svg');
     margin-right: 10px;
 } */
 

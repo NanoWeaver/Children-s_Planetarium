@@ -8,11 +8,13 @@ let popupInputShells = document.querySelectorAll('.popup__input-shell');
 open.addEventListener('click', () => { // Обработка клика на кнопку Заказать
     popup.classList.add('popup--open');
     overlay.classList.add('popup--open');
+    document.body.classList.toggle('body--popup--open');
 })
 
 close.addEventListener('click', () => { // Обработка клика на крестик закрытия
     popup.classList.remove('popup--open');
     overlay.classList.remove('popup--open');
+    document.body.classList.toggle('body--popup--open');
 })
 
 send.addEventListener('click', () => { // Обработка клика на кнопку Отправить 
